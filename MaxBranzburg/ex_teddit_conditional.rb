@@ -10,10 +10,13 @@ def get_input
 end
 
 def calculate_upvotes(story, category)
+
+
 	# Write code so that:
 		# If the Story is about cats multiply the upvotes by 5
 		# If the Story is about bacon multiply the upvotes by 8
 		# If the Story is about Food it gets 3 times the upvotes.
+
 		upvotes ||= 1
 
 		if category.downcase.to_s == "cats"
@@ -33,6 +36,7 @@ def calculate_upvotes(story, category)
 
 	#For example:
 	# "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
+
 end
 
 puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
@@ -42,9 +46,3 @@ puts "Please give it a category:"
 category = get_input
 upvotes = calculate_upvotes(story, category)
 puts "New story added! \nStory: \t\t\t#{story} \nCategory: \t\t#{category} \nCurrent Upvotes: \t#{upvotes}"
-
-
-
-
-
-
