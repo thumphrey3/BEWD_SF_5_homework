@@ -3,7 +3,7 @@
 3) add, commit, and then push
 4)  A location on your local computer which allows to store a forked version of code.
 
-5) 
+5) c
 $ git pull
 $ git add .  #put specific file name
 $ git commit -m 'initial commit' #put description of updated code
