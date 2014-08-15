@@ -36,3 +36,39 @@
 #
 ###############################################################################
 
+def get_input
+	gets.chomp.strip
+end
+
+secret_number = 6
+
+
+puts "Welcome to my game.\nThis game was created by Colin Cahill."
+puts "Player, what is your name?"
+	get_input
+puts "Hi, #{get_input.capitalize}!"
+sleep 3
+puts "Please guess a number between 1 and 10.\nYou may only take three guesses as to the correct number."
+
+sleep 3
+
+counter = 0
+	while (counter <=3 || get_input !=6)
+		puts "When you are ready, please submit your guess:"
+
+		get_input
+
+		"Hmm, #{get_input.to_s}!"
+
+			if get_input = secret_number
+				sleep 2
+				puts "My stars!  That is the secret number!  Are you a psychic medium?"
+			elsif get_input < secret_number
+					sleep 2
+					puts "I believe that may be a little low..."
+			elsif get_input > secret_number
+					puts "I believe that may be a little high..."
+			end
+	end		
+
+
