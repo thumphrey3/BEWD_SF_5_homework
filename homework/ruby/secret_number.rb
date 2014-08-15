@@ -16,7 +16,7 @@
 # Here are some guidelines to building your game:
 #
 #	Intros
-# 	-	Welcome the player to your game. Let them know who created the game. 
+# 	DONE -	Welcome the player to your game. Let them know who created the game. 
 #	  -	Ask for the player's name then personally greet them by printing to the screen, "Hi player_name!"
 #	  -	Any good game will communicate the rules. Let the player know they must guess a number between 1 and 10 
 #		and that they only have 3 tries to do so.
@@ -24,7 +24,7 @@
 #	Functionality: 
 #	 -	Hard code the secret number. Make it a random number between 1 and 10.
 #	 - 	Ask the user for their guess.
-#	 -	Verify if they were correct. If the player guesses correctly they win the game they should be congratulated and the game should end.
+#	 -	Verify if they were correct. Ifctly they win the game they should be congratulate the player guesses corred and the game should end.
 #	 -	If they guess incorrectly, give the player some direction. If they guess too high let them know, if they guess too low, let them know.
 #	 - 	Don't forget to let your players know how many guesses they have left. Your game should say something like
 #		  "You have X many guesses before the game is over enter a another number"
@@ -35,4 +35,50 @@
 # Remember to cast input from the Player into the appropriate data type.
 #
 ###############################################################################
+
+
+secret_number = 8
+
+puts "Welcome to this game.  Matt Flannery created it!"
+puts "Can I have your name?"
+player_name = gets 
+print  "Hi " + player_name 
+puts "Now you must guess a number between 1 and 10 and you will only have three tries!"
+
+
+number_tries = 0
+
+while true
+	puts "What is your guess?"
+	player_number = gets.to_i
+
+	if !(player_number > 0 && player_number < 11) 
+		puts "Thats not a number between 1 and 10!"
+	elsif(player_number == secret_number)
+		puts "Congratulations you got it!"
+		break
+	else
+		if player_number < secret_number
+			puts "That is too low!"
+		else
+			puts "That is too high!"
+		end
+	end
+	number_tries+=1
+	if number_tries >=3 
+		puts "Sorry you lose!"
+		break
+	end 
+end 
+
+
+
+
+
+
+
+
+
+
+
 
