@@ -9,6 +9,34 @@ def get_input
   input = gets.chomp
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def calculate_upvotes(story, category)
 	# Write code so that:
 		# If the Story is about cats multiply the upvotes by 5
