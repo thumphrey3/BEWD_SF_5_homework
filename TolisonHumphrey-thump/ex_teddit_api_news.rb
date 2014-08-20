@@ -41,6 +41,8 @@ stories =[]
 
 reddit_json(stories)
 
+
+
 # def show_message(message)
 #   puts message
 # end
