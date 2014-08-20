@@ -1,4 +1,4 @@
-#Apartment class.
+#Apartment Class
 class Apartment
 
 	attr_accessor :name, :apt_sqft, :apt_bedrooms, :apt_bathrooms, :renter, :rent
@@ -8,9 +8,10 @@ class Apartment
 	    @apt_sqft = apt_sqft
 	    @apt_bedrooms = apt_bedrooms
 	    @apt_bathrooms = apt_bathrooms
-  	end 
+  	end
 
-	def to_s 
-		"#{@name} #{@apt_sqft} square feet #{@apt_bedrooms} bedrooms #{@apt_bathrooms} bathrooms."
+  	def to_s 
+		"\nUnit:\t#{@name}\nSQFT:\t#{@apt_sqft}\nBed:\t#{apt_bedrooms}\nBath:\t#{apt_bathrooms}"
 	end
+
 end

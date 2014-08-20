@@ -10,8 +10,13 @@ class Building
   	end 
 
   	def view_apartments
-  		apartments.each do |apartment|
-  			puts apartment.name
+  		puts "#{@building_name} @ #{@building_address} inlcudes:"
+		apartments.each do |apartment|
+			if apartment.rent != nil
+				puts "Unit #{apartment.name}: #{apartment.apt_sqft} sqft || #{apartment.apt_bedrooms} bed | #{apartment.apt_bathrooms} bath | Rented for $#{apartment.rent}/month"
+			else
+				puts "Unit #{apartment.name}: #{apartment.apt_sqft} sqft || #{apartment.apt_bedrooms} bed | #{apartment.apt_bathrooms} bath | Available for rent!"
+			end
   		end
   	end
 end
