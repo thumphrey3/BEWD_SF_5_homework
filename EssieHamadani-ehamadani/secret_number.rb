@@ -36,55 +36,87 @@
 #
 ###############################################################################
 
-def guess_term(remaining_guesses)			# Ensure agreement of # of guesses remaining and language
-	if remaining_guesses == 1
-		return "guess"
-	else
-		return "guesses"
-	end
+# greet player
+secret_number = 10
+
+# puts "Welcome, to the secret game."
+# puts "What's your name?"
+# name = gets.chomp
+# puts "Nice to meet you #{name}."
+
+def the_player
+	puts "Welcome, to the secret game."
+	puts "What's your name?"
+	name = gets.chomp
+	puts "Nice to meet you #{name}."
+	puts "Please choose a number between 1 - 10. You only get three tries."
+	number = gets.chomp.to_i
+	the_loop(number)
+	puts "this should not be printed"
 end
 
-puts "Welcome to Secret Number!"				# Introduce game
-puts "Secret Number was created by Max Branzburg"
-puts "What is your name?"
+def the_loop(number, num_tries = 3)
 
-name = gets.chomp								# Identify player name
-
-puts "Hi, #{name}!"
-puts
-puts "Rules:\n  1.\tGuess a number between 1 and 10 (inclusive).\n  2.\tYou will have 3 guesses."
-
-secret_num = 1 + rand(10)						# Set secret number as random between 1 and 10 (inclusive)
-
-puts
-puts "What is your first guess?"
-guess = 0
-remaining_guesses = 2
-
-while guess != secret_num && remaining_guesses >= 0 do 		# Initiate loop while player has remaining guesses and hasn't guessed correctly
-	guess = gets.chomp.to_i
-	if
-		guess > secret_num
-		if remaining_guesses > 0
-			puts "Too high, you have " + remaining_guesses.to_s + " #{guess_term(remaining_guesses)} left."
-			remaining_guesses = remaining_guesses - 1
-		else
-			puts "Still too high.  No more guesses left!"
-			remaining_guesses = remaining_guesses - 1
+	num_tries.times do |i| # i = 0, 1 # 5.times { |i| puts i}
+		number = gets.chomp.to_i
+		# do check
+		if number == secret_number
+			puts "You win!"
+			puts i
+			# break
+		elsif number < secret_number  #i  #< num_tries # you have more tries
+			if i < 3 
+				puts "You are too low" #{i} You have this many tries"
+			else number > secret_number
+				puts "You are too high" # No winny game"
+				puts i
+			end
 		end
-	elsif
-		guess < secret_num
-		if remaining_guesses > 0
-			puts "Too low, you have " + remaining_guesses.to_s + " #{guess_term(remaining_guesses)} left."
-			remaining_guesses = remaining_guesses - 1
-		else
-			puts "Still too low.  No more guesses left!"
-			remaining_guesses = remaining_guesses - 1
-		end	
-	else
-		puts "Correct!"
 	end
+	# do X tries
+	# ask for a number
+	# verify that number (check if correct)
+	#pulling definition also needs the parameters from that definition
 end
 
-puts
-puts "Game Over!"								# End game
+# understand how many tries we are on
+# give them another try 
+
+# def the_guess(number,num_tries = 3)
+# 	secret_number = 10
+# 	if number == secret_number
+# 		puts "#{name} you did good. You won!"
+# 	else number != secret_number
+# 		puts "#{number} is wrong. You have 2 more tries!"
+# 	end
+# end
+
+# 
+
+# def loop(number)
+# 	count = 0
+# 	while count <= 3
+# 		puts "Try again"
+
+
+the_player
+
+# 	if x == "10"
+# 		puts "Well done! You got the secret number!"
+# 	elsif
+# 		puts "Try again."
+
+# 	end
+# end
+
+# # communicate rules
+
+# # Get guess
+
+# # set conditionals
+# # set secret number 
+# # limit tries to 3
+# # yes or no conditional 
+
+
+
