@@ -36,3 +36,11 @@
 #
 ###############################################################################
 
+puts "Welcome to Secret Number, a game created by Jian Zheng"
+
+puts "What is your name?"
+
+username = gets.strip
+
+puts "Hi #{username}!"
+
