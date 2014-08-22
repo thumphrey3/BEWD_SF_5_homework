@@ -18,8 +18,6 @@ class Game
 
 		@secret_number = SecretNumber.new()
 
-		puts "the secret number is " + @secret_number.number.to_s
-
 		play
 
 	end
