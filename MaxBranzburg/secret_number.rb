@@ -36,3 +36,55 @@
 #
 ###############################################################################
 
+def guess_term(remaining_guesses)			# Ensure agreement of # of guesses remaining and language
+	if remaining_guesses == 1
+		return "guess"
+	else
+		return "guesses"
+	end
+end
+
+puts "Welcome to Secret Number!"				# Introduce game
+puts "Secret Number was created by Max Branzburg"
+puts "What is your name?"
+
+name = gets.chomp								# Identify player name
+
+puts "Hi, #{name}!"
+puts
+puts "Rules:\n  1.\tGuess a number between 1 and 10 (inclusive).\n  2.\tYou will have 3 guesses."
+
+secret_num = 1 + rand(10)						# Set secret number as random between 1 and 10 (inclusive)
+
+puts
+puts "What is your first guess?"
+guess = 0
+remaining_guesses = 2
+
+while guess != secret_num && remaining_guesses >= 0 do 		# Initiate loop while player has remaining guesses and hasn't guessed correctly
+	guess = gets.chomp.to_i
+	if
+		guess > secret_num
+		if remaining_guesses > 0
+			puts "Too high, you have " + remaining_guesses.to_s + " #{guess_term(remaining_guesses)} left."
+			remaining_guesses = remaining_guesses - 1
+		else
+			puts "Still too high.  No more guesses left!"
+			remaining_guesses = remaining_guesses - 1
+		end
+	elsif
+		guess < secret_num
+		if remaining_guesses > 0
+			puts "Too low, you have " + remaining_guesses.to_s + " #{guess_term(remaining_guesses)} left."
+			remaining_guesses = remaining_guesses - 1
+		else
+			puts "Still too low.  No more guesses left!"
+			remaining_guesses = remaining_guesses - 1
+		end	
+	else
+		puts "Correct!"
+	end
+end
+
+puts
+puts "Game Over!"								# End game
