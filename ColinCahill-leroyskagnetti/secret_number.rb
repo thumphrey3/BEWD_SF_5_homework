@@ -36,39 +36,74 @@
 #
 ###############################################################################
 
-def get_input
-	gets.chomp.strip
-end
-
 secret_number = 6
 
 
 puts "Welcome to my game.\nThis game was created by Colin Cahill."
 puts "Player, what is your name?"
-	get_input
-puts "Hi, #{get_input.capitalize}!"
-sleep 3
+	name = gets.chomp
+puts "Hi, #{name.capitalize}!"
+sleep 1
 puts "Please guess a number between 1 and 10.\nYou may only take three guesses as to the correct number."
 
-sleep 3
+sleep 2
 
-counter = 0
-	while (counter <=3 || get_input !=6)
-		puts "When you are ready, please submit your guess:"
+guess_count =0
+guess = nil
 
-		get_input
+while guess_count < 3 && guess != secret_number do		
+	puts "Enter your guess:"
+	guess = gets.chomp.to_i
 
-		"Hmm, #{get_input.to_s}!"
+	if guess == secret_number
+		puts "My stars!  You have guessed the secret number!"
+		elsif guess < secret_number
+			puts "Hmm, I think that is a little low..."
+			guess_count = guess_count + 1
+			sleep 1
+			puts "You have #{3 - guess_count} guesses remaining."
+		elsif guess > secret_number
+			puts "Hmm, I think that is a little high..."
+			guess_count = guess_count + 1
+			sleep 1
+			puts "You have #{3 - guess_count} guesses remaining."
+	end
+end
+	
+	if guess == secret_number
+	exit
+	else
+		sleep 2
+		puts "I'm sorry, #{name}, you have failed to guess the secret number within 3 guesses.\n
+		The actual secret number was...."
+		sleep 2
+		puts "\t\t\t#{secret_number}!"
+	end
 
-			if get_input = secret_number
-				sleep 2
-				puts "My stars!  That is the secret number!  Are you a psychic medium?"
-			elsif get_input < secret_number
-					sleep 2
-					puts "I believe that may be a little low..."
-			elsif get_input > secret_number
-					puts "I believe that may be a little high..."
-			end
-	end		
+
+
+
+
+	
+
+
+	# while (counter <=3 || get_input !=6) do
+	# 	puts "When you are ready, please submit your guess:"
+
+	# 	guess = gets.chomp
+
+	# 	"Hmm, #{get_input.to_s}!"
+
+	# 		if guess = secret_number
+	# 			sleep 1
+	# 			puts "My stars!  That is the secret number!  Are you a psychic medium?"
+	# 		elsif guess < secret_number
+	# 				sleep 1
+	# 				puts "I believe that may be a little low..."
+	# 		elsif guess > secret_number
+	# 				sleep 1
+	# 				puts "I believe that may be a little high..."
+	# 		end
+
 
 
