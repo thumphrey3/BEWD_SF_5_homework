@@ -15,4 +15,5 @@ class Apartment
 			"#{@name} has #{@sqft} sqft with #{@num_bedrooms} bedrooms and #{@num_bathrooms} bathrooms"
 		end
 
+
 end
