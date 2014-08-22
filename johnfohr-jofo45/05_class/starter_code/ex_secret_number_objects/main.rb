@@ -20,7 +20,7 @@
 #   This class should initiate an array of numbers that range between 1 - 10.
 #   Use a method from the array class to select a random element from that array. This random number will be the secret number.
 #   This way the secret number is also a secret to you.
-#
+#bbbbb
 # Player
 #  Should initialize the player's name.
 #
@@ -39,10 +39,37 @@
 # Tips: Copy paste your code from homework 1 where necessary.
 
 $:.unshift (File.dirname(__FILE__))
+
 require 'lib/game'
+require 'lib/person'
+require 'lib/secret_number'
+
+
+def get_user_name
+  puts "What is your name?"
+  name = gets.strip
+
+  Person.new(name)
+end
+
+
+
+
+
 
 # put code here print a welcome message for your user
-
+puts
+puts
+puts "********* Welcome to the best game in the world! *********"
+puts
+puts "Made by John Fohr"
+puts
 # put code here ask the user for their name, and save it
 
+user = get_user_name
+
+
+
 # put code here to create a new game, and start it
+#game = start_game
+
