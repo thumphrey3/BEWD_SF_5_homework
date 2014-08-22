@@ -64,6 +64,7 @@ secret_number = rand(10)+1
 2.downto(0) do |i|
 if user_guess == secret_number 
 	puts "Congratulations! You won!"
+	break
 else
 	if i > 0
 		if user_guess > secret_number
