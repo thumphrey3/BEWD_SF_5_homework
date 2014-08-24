@@ -30,14 +30,7 @@ end
 # Player
 #  Should initialize the player's name.
 
-# class Player
-# 	attr_accessor :name
-	
-# 	def initialize(name)
 
-# 	@name = name
-# 	end
-# end
 #
 # Game
 #	This class holds most of the game logic and should:

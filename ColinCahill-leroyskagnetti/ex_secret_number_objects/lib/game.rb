@@ -3,11 +3,11 @@ require 'lib/secret_number'
 
 class Game
 # this class will be complex
-	attr_accessor :player, :secret_number, :welcome_message, :guess
+	attr_accessor :player, :secret_number, :welcome_message, :guess, :guess_count
 
 	def initialize
 		@player = Player.new	
-		@secret_number = SecretNumber.new
+		@secret = SecretNumber.new
 	end
 
 	def welcome_message
@@ -19,26 +19,44 @@ class Game
 	end
 
 	def guess_loop
-		@guess_count = 0
-		@guess = gets.chomp.to_i
-		if @guess == @secret_number
-		puts "My stars!  You have guessed the secret number!"
 
-		elsif @guess < @secret_number
-			puts "Hmm, I think that is a little low..."
-			@guess_count = @guess_count + 1
-			sleep 1
-			puts "You have #{3 - guess_count} guesses remaining."
-		elsif @guess > @secret_number
-			puts "Hmm, I think that is a little high..."
-			@guess_count = @guess_count + 1
-			sleep 1
-			puts "You have #{3 - @guess_count} guesses remaining."
-	end
+		@guess_count = 0
+
+		while guess_count < 3 && guess != @secret.secret_number do
+			@guess = gets.chomp
+			if @guess == @secret.secret_number 
+			puts "My stars!  You have guessed the secret number!"
+			elsif @guess.to_i < @secret.secret_number
+				puts "Hmm, I think that is a little low..."
+				@guess_count = @guess_count + 1
+				sleep 1
+				puts "You have #{3 - guess_count} guesses remaining."
+			elsif @guess.to_i > @secret.secret_number
+				puts "Hmm, I think that is a little high..."
+				@guess_count = @guess_count + 1
+				sleep 1
+				puts "You have #{3 - @guess_count} guesses remaining."			
+			end
+			
+		end
+
+		# sleep 2
+		# 	puts "I'm sorry, #{@player.name}, you have failed to guess the secret number within 3 guesses.\n
+		# 	The actual secret number was...."
+		# 	sleep 2
+		# 	puts "\t\t\t#{@secret.secret_number}!\n Would you like to play again? (y) or (n)"
+		# 	response = gets.chomp.downcase
+		# 	if response == "y" || response == "yes"
+		# 		pick_number
+		# 		guess_loop
+		# 	else
+		# 	end
+
 	end
 end
+		
+	
 
 # we need to write logic to initialize a new game, and run the game loop
 # we'll want to write a few separate methods for unique tasks so that our
 # code is structured properly
-
