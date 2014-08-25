@@ -17,9 +17,6 @@ require 'pry'
 #	The main class is where the game begins. This class should tell the player who made it.
 #	Ask the player for their name and instantiate the Game class.
 
-class Main
-end
-
 #
 # SecretNumber
 #   This class should initiate an array of numbers that range between 1 - 10.
@@ -49,19 +46,23 @@ end
 $:.unshift (File.dirname(__FILE__))
 require 'lib/game'
 
-# put code here print a welcome message for your user
-puts "******************************GAME BEGIN*************************************\n \t \t Are you ready to rock and roll??"
+class Main
+	attr_accessor :game
+	def initialize
+		@game = Game.new
+		sleep 2
+		self.ask_name
+	end
+
+	def ask_name
+		puts "Player, what is your name?"
+		@game.player.name = gets.chomp.capitalize
+		puts "Alright, #{@game.player.name}, let's play!"
+	end
+
+end
+
 sleep 1
-game = Game.new
+new_game = Main.new
 sleep 1
-
-game.welcome_message
-
-puts "Player, what is your name?"
-game.player.name = gets.chomp
-
-sleep 1
-puts "Thank you, #{game.player.name}."
-
-game.pick_number
-game.guess_loop
+new_game.game.guess_loop

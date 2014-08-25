@@ -44,19 +44,21 @@ puts "Player, what is your name?"
 	name = gets.chomp
 puts "Hi, #{name.capitalize}!"
 sleep 1
-puts "Please guess a number between 1 and 10.\nYou may only take three guesses as to the correct number."
+puts "To play this game, you will guess a number between 1 and 10.\nYou may only take three guesses as to the correct number."
 
-sleep 2
+sleep 1
 
 guess_count =0
 guess = nil
 
 while guess_count < 3 && guess != secret_number do		
-	puts "Enter your guess:"
+	puts "\nEnter your guess:"
 	guess = gets.chomp.to_i
 
 	if guess == secret_number
 		puts "My stars!  You have guessed the secret number!"
+		elsif ((1..10) === guess) == false
+			puts "Please enter a number between 1 and 10.".center(100, "*")
 		elsif guess < secret_number
 			puts "Hmm, I think that is a little low..."
 			guess_count = guess_count + 1
@@ -74,10 +76,11 @@ end
 	exit
 	else
 		sleep 2
-		puts "I'm sorry, #{name}, you have failed to guess the secret number within 3 guesses.\n
+		print "I'm sorry, #{name}, you have failed to guess the secret number within 3 guesses.\n
 		The actual secret number was...."
 		sleep 2
-		puts "\t\t\t#{secret_number}!"
+		print "#{secret_number}!\n"
+
 	end
 
 
