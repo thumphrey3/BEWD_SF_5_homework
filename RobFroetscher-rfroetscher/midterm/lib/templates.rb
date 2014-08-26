@@ -8,14 +8,7 @@ class Template
 				<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 				<html lang="en">
 				    <head>
-				<title>Love</title>
-				            <!--[if !mso]><!-->
-				            <style type="text/css">
-				                @import url(https://s3.amazonaws.com/content.lumosity.com/email/css/css.css?family=MuseoSans);
-				                @import url(https://s3.amazonaws.com/content.lumosity.com/email/css/css.css?family=MuseoSansFive);
-				            </style>
-				            <!--<![endif]-->
-				            
+				<title>Love</title>       
 				            <style type="text/css">
 				                @media only screen and (max-device-width: 480px) {
 				                    
@@ -34,10 +27,6 @@ class Template
 				                    table[class=table_main-content] {width: 260px !important;}
 
 				                    table[id=table_social] {width: 251px !important;} 
-
-				                    td[id=td_lumosityfooter] {width: 101px !important;}
-
-				                    img[id=img_lumosityfooter] {width: 85px !important; height: auto !important;} 
 
 				                    td[class=td_socialmid] {width: 30px !important;} 
 
@@ -113,16 +102,10 @@ class Template
 
 				                    img[class=img_fullwidth] {width: 260px !important; height: auto;}
 				                    
-				                    td[id=td_topbar_premium] {
-				                        background-image: url('https://s3.amazonaws.com/content.lumosity.com/email/premiumbanner_m.gif') !important;
-				                        background-size: 96px 45px !important;
-				                        background-position: right top !important;
-				                        background-repeat: no-repeat !important;
-				                        padding-bottom: 6px !important;
-				                    }
+				
 				                    
 				                    td[id=td_hero] {
-				                        background-image: url('https://s3.amazonaws.com/content.lumosity.com/email/swd/sci_hero_lumos_m.gif') !important;
+				                        background-image: url('https://s3-us-west-2.amazonaws.com/robfroetscheremailcontent/roses_m.png') !important;
 				                        background-size: 320px 141px !important;
 				                        background-position: left top !important;
 				                        background-repeat: no-repeat !important;
@@ -154,14 +137,14 @@ class Template
 				                    }
 				                }
 
-				                a {color:#0E91A1;font-family:MuseoSans, Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline;}
+				                a {color:#0E91A1;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline;}
 				a, a:link, a:visited {text-decoration:none;color:#0E91A1;} 
 				a:hover {text-decoration:underline;}
 
 				span {margin:0;padding:0;color:#000000;}
 				table td {border-collapse: collapse;}
 
-				.table_footer-legal a {color:#FFFFFF;font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline !important;}
+				.table_footer-legal a {color:#FFFFFF;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline !important;}
 				.table_footer-legal a a:link a:visited {text-decoration:underline;color:#FFFFFF !important;} 
 				.table_footer-legal a:hover {text-decoration:underline !important;}
 
@@ -209,7 +192,7 @@ class Template
 				                                        <table width="560" border="0" align="center" cellspacing="0" cellpadding="0" style="margin:0 auto" class="table_main-content">
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_60" style="padding-top:60px;">
-				                                                        <div style="font-family:MuseoSans,Trebuchet MS,Arial,Helvetica,sans-serif;font-weight:bold;font-style:normal;display:block;text-align:left;">
+				                                                        <div style="font-family:Trebuchet MS,Arial,Helvetica,sans-serif;font-weight:bold;font-style:normal;display:block;text-align:left;">
 				                                                            <span style="font-size:38px;line-height:47px;color:#055960;margin:0;padding:0;" class="h1">
 				                                                               Love:
 				                                                            </span>
@@ -218,7 +201,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_0" style="padding-top:0;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; text-align:left; display:block;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; text-align:left; display:block;">
 				                                                            <span style="font-size:30px;line-height:40px;color:#055960;margin:0;padding:0;" class="h3">
 				                                                                #{sender} is into you!
 				                                                            </span>
@@ -227,7 +210,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_30" style="padding-top:40px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                                Love is friendship that has caught fire. It is quiet understanding, mutual confidence, sharing and forgiving. It is loyalty through good and bad times. It settles for less than perfection and makes allowances for human weaknesses.
 				                                                            </span>
@@ -236,7 +219,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_60" style="padding-top:40px;">
-				                                                        <div style="font-family:MuseoSans,Trebuchet MS,Arial,Helvetica,sans-serif; text-align:left; display:block;">
+				                                                        <div style="font-family:Trebuchet MS,Arial,Helvetica,sans-serif; text-align:left; display:block;">
 				                                                            <span style="font-size:24px;line-height:32px;color:#000000;margin:0;padding:0;" class="h4">
 				                                                                You're purrrrfect for me, #{recipient}!
 				                                                            </span>
@@ -245,7 +228,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_20" style="padding-top:10px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                                <img align="right" alt="Cat" class="hide" height="198" src="https://s3-us-west-2.amazonaws.com/robfroetscheremailcontent/cat.png" style="float:right; display:block; -ms-interpolation-mode:bicubic;" width="197" />Love is a force more formidable than any other. It is invisible - it cannot be seen or measured, yet it is powerful enough to transform you in a moment, and offer you more joy than any material possession could.
 				                                                            </span>
@@ -254,7 +237,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_20" style="padding-top:10px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                             	#{message}
 				                                                            </span>
@@ -281,13 +264,6 @@ class Template
 				<html lang="en">
 				    <head>
 				<title>Congrats!</title>
-				            <!--[if !mso]><!-->
-				            <style type="text/css">
-				                @import url(https://s3.amazonaws.com/content.lumosity.com/email/css/css.css?family=MuseoSans);
-				                @import url(https://s3.amazonaws.com/content.lumosity.com/email/css/css.css?family=MuseoSansFive);
-				            </style>
-				            <!--<![endif]-->
-				            
 				            <style type="text/css">
 				                @media only screen and (max-device-width: 480px) {
 				                    
@@ -306,10 +282,6 @@ class Template
 				                    table[class=table_main-content] {width: 260px !important;}
 
 				                    table[id=table_social] {width: 251px !important;} 
-
-				                    td[id=td_lumosityfooter] {width: 101px !important;}
-
-				                    img[id=img_lumosityfooter] {width: 85px !important; height: auto !important;} 
 
 				                    td[class=td_socialmid] {width: 30px !important;} 
 
@@ -385,16 +357,10 @@ class Template
 
 				                    img[class=img_fullwidth] {width: 260px !important; height: auto;}
 				                    
-				                    td[id=td_topbar_premium] {
-				                        background-image: url('https://s3.amazonaws.com/content.lumosity.com/email/premiumbanner_m.gif') !important;
-				                        background-size: 96px 45px !important;
-				                        background-position: right top !important;
-				                        background-repeat: no-repeat !important;
-				                        padding-bottom: 6px !important;
-				                    }
+
 				                    
 				                    td[id=td_hero] {
-				                        background-image: url('https://s3.amazonaws.com/content.lumosity.com/email/swd/sci_hero_lumos_m.gif') !important;
+				                        background-image: url('https://s3-us-west-2.amazonaws.com/robfroetscheremailcontent/congrats_m.png') !important;
 				                        background-size: 320px 141px !important;
 				                        background-position: left top !important;
 				                        background-repeat: no-repeat !important;
@@ -426,14 +392,14 @@ class Template
 				                    }
 				                }
 
-				                a {color:#0E91A1;font-family:MuseoSans, Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline;}
+				                a {color:#0E91A1;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline;}
 				a, a:link, a:visited {text-decoration:none;color:#0E91A1;} 
 				a:hover {text-decoration:underline;}
 
 				span {margin:0;padding:0;color:#000000;}
 				table td {border-collapse: collapse;}
 
-				.table_footer-legal a {color:#FFFFFF;font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline !important;}
+				.table_footer-legal a {color:#FFFFFF;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif;text-decoration:underline !important;}
 				.table_footer-legal a a:link a:visited {text-decoration:underline;color:#FFFFFF !important;} 
 				.table_footer-legal a:hover {text-decoration:underline !important;}
 
@@ -481,7 +447,7 @@ class Template
 				                                        <table width="560" border="0" align="center" cellspacing="0" cellpadding="0" style="margin:0 auto" class="table_main-content">
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_60" style="padding-top:60px;">
-				                                                        <div style="font-family:MuseoSans,Trebuchet MS,Arial,Helvetica,sans-serif;font-weight:bold;font-style:normal;display:block;text-align:left;">
+				                                                        <div style="font-family:Trebuchet MS,Arial,Helvetica,sans-serif;font-weight:bold;font-style:normal;display:block;text-align:left;">
 				                                                            <span style="font-size:38px;line-height:47px;color:#055960;margin:0;padding:0;" class="h1">
 				                                                               Congratulations, #{recipient}!
 				                                                            </span>
@@ -490,7 +456,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_0" style="padding-top:0;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; text-align:left; display:block;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; text-align:left; display:block;">
 				                                                            <span style="font-size:30px;line-height:40px;color:#055960;margin:0;padding:0;" class="h3">
 				                                                                You done good!
 				                                                            </span>
@@ -499,7 +465,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_30" style="padding-top:40px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                                #{message}
 				                                                            </span>
@@ -508,7 +474,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_60" style="padding-top:40px;">
-				                                                        <div style="font-family:MuseoSans,Trebuchet MS,Arial,Helvetica,sans-serif; text-align:left; display:block;">
+				                                                        <div style="font-family:Trebuchet MS,Arial,Helvetica,sans-serif; text-align:left; display:block;">
 				                                                            <span style="font-size:24px;line-height:32px;color:#000000;margin:0;padding:0;" class="h4">
 				                                                                Success consists of going from failure to failure without loss of enthusiasm.
 				                                                            </span>
@@ -517,7 +483,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_20" style="padding-top:10px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                                <img align="right" alt="Thumbs up!" class="hide" height="198" src="https://s3-us-west-2.amazonaws.com/robfroetscheremailcontent/thumbs.png" style="float:right; display:block; -ms-interpolation-mode:bicubic;" width="197" />The price of success is hard work, dedication to the job at hand, and the determination that whether we win or lose, we have applied the best of ourselves to the task at hand.
 				                                                            </span>
@@ -526,7 +492,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_20" style="padding-top:10px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                             	Keep it up!
 				                                                            </span>
@@ -535,7 +501,7 @@ class Template
 				                                                </tr>
 				                                                <tr>
 				                                                    <td valign="top" align="left" class="td_padding_t_20" style="padding-top:10px;">
-				                                                        <div style="font-family:MuseoSans,Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
+				                                                        <div style="font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif; font-style:normal; text-align:left; display:block; padding-top:0;">
 				                                                            <span class="span_body" style="font-size:18px;line-height:26px;color:#000000;margin:0;padding:0;">
 				                                                             	#{sender}
 				                                                            </span>
