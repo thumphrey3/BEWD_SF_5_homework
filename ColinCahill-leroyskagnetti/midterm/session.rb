@@ -32,6 +32,8 @@ class Session
 			@geo_search = Location.new
 			@geo_search.location_results
 			@geo_search.select_result
+			@twitter.location_search_filter
+			@twitter.search_location_results
 		elsif user_choice == 'q'
 			puts "Thanks for playing!"
 			exit

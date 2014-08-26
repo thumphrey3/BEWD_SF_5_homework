@@ -1,6 +1,10 @@
 require 'twitter'
 require 'rest-client'
 
+#Including OpenSSL disabler to avoid conflicts on outdated OpenSSL terminals.
+
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 class TwitterConnection
 
  attr_accessor :client, :query
@@ -8,7 +12,8 @@ class TwitterConnection
   def initialize
   # Initializes new connection to Twitter API.
   # connection info found here:  http://rdoc.info/gems/twitter
-     
+  
+  
      puts "Loading New Twitter Session".center(100,"~")
      @client = Twitter::REST::Client.new do |config|
        config.consumer_key        = "1OjqzZ6XVPN6hbyWWVhR5hrNw"
@@ -37,9 +42,14 @@ class TwitterConnection
     end
   end
 
-  def search_by_location(lat,long)
-         # client.
-         return []
+  def location_search_filter
+      puts "Now, please enter a search term to filter results, or press enter to display all results near your location."
+      @query = gets.chomp
+      @search_radius="5mi"
+  end
+
+  def search_location_results
+    @results = client.search(@query, :geocode =>"#{@geo_search.coordinates},@search_radius")
   end
 
 end
