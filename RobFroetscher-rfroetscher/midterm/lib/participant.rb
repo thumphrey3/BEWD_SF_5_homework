@@ -19,7 +19,7 @@ class Recipient < Participant
 		puts "What's the name of the person you would like to send this email to?"
 		@name = gets.chomp
 		while true
-			puts "What's this person's email address?"
+			puts "Enter your recipient's email address to send."
 			@email = gets.chomp
 			if verify_email(@email) == true
 				break
