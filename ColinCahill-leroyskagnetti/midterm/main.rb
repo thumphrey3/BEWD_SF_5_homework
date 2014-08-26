@@ -1,12 +1,8 @@
-require_relative 'twitter'
+require_relative 'session'
 require 'pry'
 
-class Main
-	attr_accessor :session
-end
-
-
-@session = Session.new
+session = Session.new
+session.start
 
 
 
