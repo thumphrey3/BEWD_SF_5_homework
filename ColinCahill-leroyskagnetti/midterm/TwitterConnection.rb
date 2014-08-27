@@ -1,3 +1,5 @@
+#please make sure these are installed before running
+
 require 'twitter'
 require 'rest-client'
 
@@ -25,31 +27,62 @@ class TwitterConnection
 
  
   def search_input
+
+   # Gets search query from user
+    
     puts "Please enter a search term on Twitter:"
     @query = gets.chomp
   end
 
   def search
+
+    # Queries Twitter for recent tweets that match the simple query
+
     puts "Let me check on that..."
-         @results = client.search(@query, :result_type => "recent", :count => 10).take(10)
+         @results = client.search(@query, :result_type => "recent", :count =>'10').take(10)
   end
 
 
   def search_result
+
+    # Prints each tweet in the returned results
+
     @results.each do |tweet|
-    puts "\nUser #{tweet.user.screen_name}\nTweet Text: \"#{tweet.text}\"\nTweet time: #{tweet.created_at}\n"
-    sleep 1
+    puts "".center(100,"_")
+    puts "\nUser:\t@#{tweet.user.screen_name}\nTweet Text:\t\"#{tweet.text}\"\nTweet time:\t#{tweet.created_at}\n"
+    puts "".center(100,"_")
+    sleep 0.5
     end
   end
 
   def location_search_filter
+
+    # Optionally applies a search filter to a location-based query of tweets
+
       puts "Now, please enter a search term to filter results, or press enter to display all results near your location."
       @query = gets.chomp
-      @search_radius="5mi"
+      @search_radius = 5
   end
 
-  def search_location_results
-    @results = client.search(@query, :geocode =>"#{@geo_search.coordinates},@search_radius")
+  def location_search(query,coordinates)
+    @results = client.search(@query, :geocode =>"#{coordinates},#{@search_radius}mi", :count =>'10')
+      if @results.attrs[:statuses].size < 3
+        puts "\nFew tweets found - increasing search radius area."
+        sleep 0.5
+        @search_radius =  @search_radius * 2
+        self.location_search(query,coordinates)
+      else 
+      end
+  end
+
+  def location_search_results
+    @results.each do |tweet|
+    puts "".center(100,"_")
+    puts "\nUser:\t@#{tweet.user.screen_name}\nTweet Text:\t\"#{tweet.text}\"\nTweet time:\t#{tweet.created_at}\n"
+    puts "".center(100,"_")
+    sleep 0.5
+  end
+
   end
 
 end

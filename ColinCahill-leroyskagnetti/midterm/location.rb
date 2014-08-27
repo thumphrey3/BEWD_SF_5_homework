@@ -1,3 +1,5 @@
+#gem install geocoder
+
 require 'geocoder'
 
 class Location
@@ -7,6 +9,7 @@ class Location
 	def initialize
 		puts "Loading Location Finder".center(100,"~")
 		self.location_enter
+		@coordinates = nil
 	end
 
 	def location_enter
@@ -31,9 +34,7 @@ class Location
 		end
 	end
 
-	def coordinates
-		@coordinates = nil
-	end
+	
 
 	def select_result
 		puts "Please enter the number of the closest geographical match to your search query:"
