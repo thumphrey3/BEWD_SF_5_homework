@@ -42,7 +42,6 @@ class TwitterConnection
          @results = client.search(@query, :result_type => "recent", :count =>'10').take(10)
   end
 
-
   def search_result
 
     # Prints each tweet in the returned results
@@ -65,8 +64,8 @@ class TwitterConnection
   end
 
   def location_search(query,coordinates)
-    @results = client.search(@query, :geocode =>"#{coordinates},#{@search_radius}mi", :count =>'10')
-      if @results.attrs[:statuses].size < 3
+    @results = client.search(@query, :geocode =>"#{coordinates},#{@search_radius}mi", :count =>'10').take(10)
+      if @results.size < 3
         puts "\nFew tweets found - increasing search radius area."
         sleep 0.5
         @search_radius =  @search_radius * 2
