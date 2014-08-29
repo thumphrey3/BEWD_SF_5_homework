@@ -36,7 +36,7 @@ class Game
 
 
 	def game_loop
-		0.upto 2 do
+		while @tries > 0 do
 			puts guess_count_notifier(@tries)
 			@guess = gets.chomp.to_i
 			if guess_evaluator(@guess) == true
