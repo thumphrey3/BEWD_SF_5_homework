@@ -1,0 +1,9 @@
+<div id ="main"><h1>Rock-Paper-Scissors!</h1>
+<h2> You threw <strong><%= @throw_array[@user_throw].capitalize %></strong><%= image_tag("/rock-paper-scissors/rock.jpeg") %>
+	<p>
+	The computer threw <strong><%= @throw_array[@computer_throw].capitalize %></strong>
+</h2>
+<%= render @game_partial %>
+
+<p><%=link_to "Try Again?", new_rock_paper_scissor_path %><p>
+</div>
