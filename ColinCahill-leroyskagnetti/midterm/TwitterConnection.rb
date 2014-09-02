@@ -1,3 +1,4 @@
+require 'pry'
 #please make sure these are installed before running
 
 require 'twitter'
@@ -32,11 +33,15 @@ class TwitterConnection
     
     puts "Please enter a search term on Twitter:"
     @query = gets.chomp
+      if @query.empty?
+        puts "You must enter a valid search term."
+        self.search_input
+      else
+      end
   end
 
   def search
 
-    # Queries Twitter for recent tweets that match the simple query
 
     puts "Let me check on that..."
          @results = client.search(@query, :result_type => "recent", :count =>'10').take(10)
@@ -77,11 +82,10 @@ class TwitterConnection
   def location_search_results
     @results.each do |tweet|
     puts "".center(100,"_")
-    puts "\nUser:\t@#{tweet.user.screen_name}\nTweet Text:\t\"#{tweet.text}\"\nTweet time:\t#{tweet.created_at}\n"
+    puts "\nUser:\t@#{tweet.attrs[:user][:name]}\nTweet Text:\t\"#{tweet.attrs[:text]}\"\nTweet time:\t#{tweet.attrs[:created_at]}\nLocation:\t#{tweet.attrs[:place].class == Hash ? tweet.attrs[:place][:full_name] : tweet.attrs[:user][:location] || "Location not found"}"  
     puts "".center(100,"_")
     sleep 0.5
   end
-
   end
 
 end
