@@ -38,8 +38,7 @@
 #
 # Tips: Copy paste your code from homework 1 where necessary.
 
-$:.unshift (File.dirname(__FILE__))
-require 'lib/game'
+require_relative 'lib/game'
 
 # put code here print a welcome message for your user
 
