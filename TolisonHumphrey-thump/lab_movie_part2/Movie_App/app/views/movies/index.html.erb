@@ -1,0 +1,15 @@
+<h1>Welcome to RetFlix! See our collection of movies below! </h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+<table id="Movies_Table" border="1">
+<tr>
+	<td>Title:</td>
+	<td>Description:</td>
+	<td>Year Released:</td>
+<% @movies.each do |movie| %>
+<tr>
+	<td><%= movie.title %></td> 
+	<td><%= movie.description %></td>
+	<td><%= movie.year_released %></td>
+</tr>
+<% end %>
+</table>
